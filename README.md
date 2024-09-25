@@ -2,7 +2,7 @@
 
 0. create schema
 
-```
+```sql
 CREATE DATABASE IF NOT EXISTS replication_test;
 USE replication_test;
 
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS replication_latency_test (
 );
 
 
-```
+```bash
 1. config.ini
 
 ```
@@ -44,12 +44,13 @@ EOF
 
 2. run Writer to insert recoard
 
-```python Writer.py
+```bash
+python Writer.py
 ```
 
 3. read recoard
 
-```
+```bash
 python monitor_replication.py
 
 ```
