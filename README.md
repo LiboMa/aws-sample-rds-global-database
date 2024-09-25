@@ -12,12 +12,11 @@ CREATE TABLE IF NOT EXISTS replication_latency_test (
     write_time DATETIME(6),
     PRIMARY KEY (id)
 );
-
-
-```bash
-1. config.ini
-
 ```
+
+
+1. config.ini
+```bash
 cat >config.ini<<EOF
 [PRIMARY_DB]
  host = globa-db-cluster-1.cluster-cryagg0uu1p6.sa-east-1.rds.amazonaws.com
