@@ -2,6 +2,18 @@
 
 0. create schema
 
+```bash 
+sudo dnf install virtualenv
+echo "alias loadenv='source venv/bin/activate'" >> ~/.bash_profile
+
+source ~/.bash_profile
+virtualenv -p $(which python3) venv && loadenv
+pip install -r requirements.txt
+
+sudo dnf install mariadb105 -y
+
+```
+
 ```sql
 CREATE DATABASE IF NOT EXISTS replication_test;
 USE replication_test;
